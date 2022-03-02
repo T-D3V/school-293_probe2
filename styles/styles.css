@@ -23,7 +23,7 @@
 
  h1, h2 ,h3, h4, h5, h6, button, label {
    font-family: 'Roboto' , sans-serif;
-   color: var(--PakeSilver);
+   text-align: center;
  }
 
  a:hover,button:hover {
@@ -33,13 +33,17 @@
  }
 
  h1 {
-   font-size: 6em;
+   font-size: 12em;
    -webkit-text-stroke: var(--ErieBlack) 4px;;
  }
 
  h2 {
-   font-size: 2em;
+   font-size: 4em;
    -webkit-text-stroke: var(--BlackOlive) 1px;
+ }
+
+ h3 {
+   font-size: 2em;
  }
 
 body {
@@ -50,6 +54,17 @@ body {
 }
 
 /*Custom selectors*/
+.dark-font {
+  color: var(--BlackOlive);
+}
+
+.bright-font {
+  color: var(--PakeSilver);
+}
+
+.sticktop {
+  position: sticky;
+}
 
 /* Header */
 .header {
@@ -62,6 +77,7 @@ body {
   top: 0px;
   background: var(--BlackOlive);
   color: var(--FloralWhite);
+  z-index: 100;
 }
 
 .logo {
@@ -130,15 +146,27 @@ body {
 /* live */
 #live-story {
   background-color: var(--BlackOlive);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 /* achievements */
 #achievements {
   background-color: var(--PakeSilver);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 /*footer*/
 #footer {
-  background-color: black;
+  background-color: var(--ErieBlack);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 /*Media queries*/
