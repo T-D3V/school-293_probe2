@@ -11,10 +11,35 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto Mono', monospace;
+  scroll-behavior: smooth;
+  scroll-behavior: -webkit-smooth;
+  -ms-overflow-x: none;
+  scrollbar-width: none;
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
  h1, h2 ,h3, h4, h5, h6, button, label {
    font-family: 'Roboto' , sans-serif;
    color: var(--PakeSilver);
+ }
+
+ a:hover,button:hover {
+   transition: all 0.1s ease-in-out;
+   transform: translateY(5px);
+   filter: brightness(0.5);
+ }
+
+ h1 {
+   font-size: 6em;
+   -webkit-text-stroke: var(--ErieBlack) 4px;;
+ }
+
+ h2 {
+   font-size: 2em;
+   -webkit-text-stroke: var(--BlackOlive) 1px;
  }
 
 body {
@@ -24,7 +49,7 @@ body {
   flex-direction: column;
 }
 
-/*Class selectors*/
+/*Custom selectors*/
 
 /* Header */
 .header {
@@ -47,7 +72,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width:50%;
+  width:40%;
 }
 
 .nav-element {
@@ -58,14 +83,62 @@ body {
   color: var(--black);
 }
 
-/*Id selectors*/
+/* Landingpage */
 
 #main {
   background-image: url("/assets/background.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.title-tag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  gap: 5em;
+}
+
+#down-btn {
+  font-size: 5em;
+  color: var(--PakeSilver);
+  -webkit-text-stroke: var(--ErieBlack) 4px;
+}
+
+#land-btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+/* bio */
+#bio {
+  background-color: var(--ErieBlack) ;
+  background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
 }
 
+/* live */
+#live-story {
+  background-color: var(--BlackOlive);
+}
+
+/* achievements */
+#achievements {
+  background-color: var(--PakeSilver);
+}
+
+/*footer*/
+#footer {
+  background-color: black;
+}
 /*Media queries*/
