@@ -1,9 +1,15 @@
 window.addEventListener("load", function(event) {
   calcLayout()
+  if(this.window.outerWidth <= 675){
+    screen.orientation.lock('portrait')
+  }
 })
 
 window.addEventListener("resize", function(even){
   calcLayout()
+  if(this.window.outerWidth <= 675){
+    screen.orientation.lock('portrait')
+  }
 })
 
 function calcLayout() {
@@ -12,7 +18,7 @@ function calcLayout() {
   let sticktop = document.querySelectorAll(".sticktop")
 
   sticktop.forEach(sticktop => {
-    sticktop.style.top = header.offsetHeight + 0.5 + "px"
+    sticktop.style.top = header.offsetHeight - 0.5 + "px"
   })
 
   pages.forEach(page => {
