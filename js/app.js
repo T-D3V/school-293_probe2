@@ -1,15 +1,9 @@
 window.addEventListener("load", function(event) {
   calcLayout()
-  if(this.window.outerWidth <= 675){
-    screen.orientation.lock('portrait')
-  }
 })
 
 window.addEventListener("resize", function(even){
   calcLayout()
-  if(this.window.outerWidth <= 675){
-    screen.orientation.lock('portrait')
-  }
 })
 
 function calcLayout() {
