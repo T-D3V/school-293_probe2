@@ -71,6 +71,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   position: sticky;
   position: -webkit-sticky;
@@ -97,6 +98,10 @@ body {
   justify-content: center;
   text-decoration: none;
   color: var(--black);
+}
+
+.icon{
+  display:none;
 }
 
 /* Landingpage */
@@ -170,3 +175,50 @@ body {
   background-size: cover;
 }
 /*Media queries*/
+
+@media screen and (max-width: 675px){
+  h1{
+    font-size: 6em;
+  }
+
+  h2{
+    font-size: 2em;
+  }
+
+  h3{
+    font-size: 1em;
+  }
+
+  .navbar{
+    display: none;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(500px);
+  }
+
+  .active{
+    position: fixed;
+    height: 100%;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0px);
+    flex-direction: column;
+    right: 0;
+    margin: 0; 
+    bottom: 0;
+    background: var(--BlackOlive);
+    text-align: center;
+    width: 100%;
+  }
+
+  .icon{
+    display: unset;
+    height: fit-content;
+    z-index: 1000;
+  }
+
+  .icon > i {
+    vertical-align: middle;
+    font-size: 3em;
+    color: var(--FloralWhite);
+  }
+}
