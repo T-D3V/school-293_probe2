@@ -11,13 +11,22 @@ function calcLayout() {
   let pages = document.querySelectorAll(".pages")
   let sticktop = document.querySelectorAll(".sticktop")
 
-  sticktop.forEach(sticktop => {
+  sticktop.forEach(function callback(sticktop,i){
     sticktop.style.top = header.offsetHeight - 0.5 + "px"
   })
 
-  pages.forEach(page => {
+  pages.forEach(function callback(page,i){
     page.style.height = window.innerHeight - header.offsetHeight + 0.5 + "px"
     page.style.scrollMarginTop = header.offsetHeight - 0.5 + "px"
+    let children =  page.children
+    let childrenHeight = 0
+    Array.from(children).forEach(child => {
+      childrenHeight += child.offsetHeight
+    })
+
+    if(page.offsetHeight<=childrenHeight){
+      page.style.height = childrenHeight + "px"
+    }
   })
 }
 
