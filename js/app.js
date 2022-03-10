@@ -23,7 +23,6 @@ function calcLayout() {
     Array.from(children).forEach(child => {
       childrenHeight += child.offsetHeight
     })
-    childrenHeight += 20
 
     if(page.offsetHeight<=childrenHeight){
       page.style.height = childrenHeight + "px"
