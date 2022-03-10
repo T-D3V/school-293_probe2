@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
   <!-- styles -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-web/css/all.min.css">
@@ -19,9 +20,8 @@
     <a href="#main"><img class="logo" src="assets/logo.svg"></a>
     <nav class="navbar">
       <a class="nav-element" href="#main" onclick="mobileNav()">Home</a>
-      <a class="nav-element"  href="#bio" onclick="mobileNav()">Bio</a>
-      <a class="nav-element"  href="#live-story" onclick="mobileNav()">Live</a>
-      <a class="nav-element"  href="#achievements" onclick="mobileNav()">Achievements</a>
+      <a class="nav-element"  href="#bio" onclick="mobileNav()">Biographie</a>
+      <a class="nav-element"  href="#live-story" onclick="mobileNav()">Leben</a>
     </nav>
     <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
       <i class="fa fa-bars"></i>
@@ -32,7 +32,7 @@
       <div class="title-tag">
         <div class="title-container">
           <h1 class="bright-font">Isaac Newton</h1>
-          <h2 class="bright-font">Probably the best known physicist</h2>
+          <h2 class="bright-font">Der wohl berühmteste Physiker der Geschichte.</h2>
         </div>
         <a href="#bio" id="land-btn">
           <i class="fa-solid fa-angles-down" id="down-btn"></i>
@@ -40,7 +40,7 @@
       </div>
     </section>
     <section id="bio" class="pages bright-font">
-      <h3 class="sticktop dark-font">Biography</h3>
+      <h3 class="sticktop dark-font">Biographie</h3>
       <div class="row">
         <div class="col-1 spacer"></div>
         <div class="col-4 flex-col">
@@ -110,13 +110,23 @@
       </div>
     </section>
     <section id="live-story" class="pages bright-font">
-      <h3 class="sticktop bright-font">Live Story</h3>
-    </section>
-    <section id="achievements" class="pages dark-font">
-      <h3 class="sticktop dark-font">Achievements</h3>
+      <h3 class="sticktop bright-font">Leben</h3>
+      <div class="row">
+        <div class="col-2 spacer"></div>
+        <div class="col-2">
+          <p class="p-life-story">
+            Sir Isaac Newton war ein englischer Physiker, Mathematiker, Astronom, Alchemist, Philosoph, Verwaltungsbeamter, der u. a. sein Hauptwerk „Philosophiae Naturalis Principia Mathematica“ (1687) verfasste und die Gravitationskraft erforschte. Er wurde nach dem gregorianischen Kalender am 4. Januar 1643 (am 25. Dezember 1642 nach dem damals in dieser Region noch verwendeten julianischen Kalender) in Woolsthorpe-by-Colsterworth, Lincolnshire in England geboren und verstarb mit 84 Jahren am 31. März 1727 (Gregorianischer Kalender, am 20. März 1726 nach julianischem Kalender) in Kensington, London. 2022 jährte sich sein Geburtstag zum 379. Mal.
+            – Quelle: https://geboren.am/person/isaac-newton
+          </p>
+        </div>
+        <div class="col-2 spacer"></div>
+      </div>
+      <div class="legal-footer">
+        <img src="assets/td3v_logo.png">
+        <p>Copyright &copy; 2022 TD3V</p>
+        <a href="pages/legal.html#">Impressum</a>
+      </div>
     </section>
   </main>
-  <footer id="footer" class="pages bright-font">
-  </footer>
 </body>
 </html>

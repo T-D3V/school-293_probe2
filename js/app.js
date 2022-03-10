@@ -16,17 +16,13 @@ function calcLayout() {
   })
 
   pages.forEach(function callback(page,i){
-    page.style.height = window.innerHeight - header.offsetHeight + 0.5 + "px"
+    page.style.minHeight = window.innerHeight - header.offsetHeight + 0.5 + "px"
     page.style.scrollMarginTop = header.offsetHeight - 0.5 + "px"
     let children =  page.children
     let childrenHeight = 0
     Array.from(children).forEach(child => {
       childrenHeight += child.offsetHeight
     })
-
-    if(page.offsetHeight<=childrenHeight){
-      page.style.height = childrenHeight + "px"
-    }
   })
 }
 
